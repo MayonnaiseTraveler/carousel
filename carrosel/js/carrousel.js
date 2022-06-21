@@ -11,7 +11,7 @@ function changeImage(carrousel, dir, maxpos, increment) {
     pos = parseInt(carrousel.getAttribute("data-pos"));
     nextpos = pos + increment * dir; //calculate next position
 
-    if (pos = nextpos < maxpos && nextpos >= 0) {
+    if (nextpos < maxpos && nextpos >= 0) {
         pos = nextpos;
         carrousel.scrollTo(pos, 0);
         carrousel.setAttribute("data-pos", pos);
