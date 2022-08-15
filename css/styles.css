@@ -37,8 +37,13 @@ button {
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+
     scrollbar-width: none;
 
+}
+
+#carrousel::-webkit-scrollbar {
+  display: none;
 }
 
 #btnleft {
