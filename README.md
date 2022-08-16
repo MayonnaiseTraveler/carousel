@@ -6,7 +6,7 @@ A simple, small, reusable and easily extensible JS carousel.
 
 Well first you will need a basic html structure that looks  like this:
 
-```
+```html
   <section id="carousel">
 
     <a class="imagecontainer" href="">
@@ -37,7 +37,7 @@ Well first you will need a basic html structure that looks  like this:
 
 The css is pretty basic and looks like this:
 
-```
+```css
 #carousel {
       background-color: #e9e9e960;
       min-height: 40vw;
@@ -114,12 +114,12 @@ The css is pretty basic and looks like this:
       filter: brightness(1.2);
       max-height: 105%;
   }
-```{.css}
+```
 
 * * * 
 Then all you have to do is to add the classes and ids you use to the script and include it in your html head.
 
-```
+```javascript
 
   document.addEventListener("DOMContentLoaded", () => {
 
@@ -136,8 +136,7 @@ Then all you have to do is to add the classes and ids you use to the script and 
 
   })
 
-
-```{:.javascipr}
+```
 
 * * *
 
