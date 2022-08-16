@@ -24,15 +24,14 @@ document.addEventListener("DOMContentLoaded", () => {
 */
 function setupCarousel(cid, imgclass, btnL, btnR, timer, autoSwitchDir) {
   var carousel = document.querySelector(cid);
-  var images = document.getElementsByClassName(imgclass); //gets a HTML collection with all the images
+  var images = document.getElementsByClassName(imgclass);
   var bLeft = document.querySelector(btnL);
   var bRight = document.querySelector(btnR);
 
   forceStartPosition(carousel, 0);
-  move(carousel, images, 0);
+
   let interval = null;
 
-  //create an interval if there isn't one already
   if (timer > 0) {
     interval = window.setInterval(move, timer, carousel, images, autoSwitchDir);
   }
@@ -67,7 +66,7 @@ function setupCarousel(cid, imgclass, btnL, btnR, timer, autoSwitchDir) {
  */
 function move(carousel, images, dir) {
 
-  var width = images[0].offsetWidth; // Gets the width of the images.
+  var width = images[0].offsetWidth;
   var maxpos = width * images.length; //mutiply the imagewidth by the amount of images to get the total size of the carrosel
 
 

@@ -6,6 +6,7 @@ A simple, small, reusable and easily extensible JS carousel.
 
 Well first you will need a basic html structure that looks  like this:
 
+
 ```html
 <section id="carousel">
 
