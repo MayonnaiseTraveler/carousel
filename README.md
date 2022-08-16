@@ -146,8 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 it uses a data attribute called data-pos in the html carousel to keep track of the carousel scrollbar position and reads it everytime it has to calculate a new position, then it just sums it with the width of the image container(all images are cropped so they have the same width/height) and bam we now have the position to the next image (nextpos = pos + width * dir)
 
-
-well just read the code and find out for yourself, it's pretty well commented
+if you want to understand better you can just check out the code itself, it's actually pretty small and well commented.
 
 hope it helps you :3
 
