@@ -117,7 +117,7 @@ display: none;
 ```
 
 * * * 
-Then all you have to do is to add the classes and ids you use to the script and include it in your html head.
+Then all you have to do is to add the classes and ids you use to this first part of the script and include it in your html head.
 
 ```javascript
 document.addEventListener("DOMContentLoaded", () => {
