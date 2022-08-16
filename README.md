@@ -1,9 +1,9 @@
 # Basic JS Carousel
-A simple, small, reusable and easily extensible JS carousel.
-* * *
+A simple, small, reusable and extensible JS carousel.
+
 ![carouselfFinal](https://user-images.githubusercontent.com/70679402/184909604-89663fb9-7d31-47ee-9e0e-593a75be02cf.gif)
 
-
+* * *
 
 ### How to use it?
 
