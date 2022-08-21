@@ -1,5 +1,8 @@
 # Basic JS Carousel
-A simple, small, reusable and easily extensible JS carousel.
+A simple, small, reusable JS carousel.
+
+![carouselfFinal](https://user-images.githubusercontent.com/70679402/184909604-89663fb9-7d31-47ee-9e0e-593a75be02cf.gif)
+
 * * *
 
 ### How to use it?
@@ -141,7 +144,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 ### how does it work? 
 
-well just read the code and find out for yourself, it's pretty well commented
+it uses a data attribute called data-pos in the html carousel to keep track of the carousel scrollbar position and reads it everytime it has to calculate a new position, then it just sums it with the width of the image container(all images are cropped so they have the same width/height) and bam we now have the position to the next image (nextpos = pos + width * dir)
+
+if you want to understand better you can just check out the code itself, it's actually pretty small and well commented.
 
 hope it helps you :3
 
