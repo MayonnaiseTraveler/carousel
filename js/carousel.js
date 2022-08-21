@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const autoSwitchDir = 1;                //direction for the carrousel to move automatically
 
   setupCarousel(cid, imgclass, btnL, btnR, timer, autoSwitchDir);
-
 })
 
 /**
@@ -60,7 +59,7 @@ function setupCarousel(cid, imgclass, btnL, btnR, timer, autoSwitchDir) {
 
 /**
  * This function is updates the position of the data-pos attribute and scrolls to the next image.
- * @param {object} carousel //the carousel id
+ * @param {object} carousel //the carousel 
  * @param {object} images //images that are children of the carrosel
  * @param {number} dir //the direction to move the image
  */
@@ -70,39 +69,36 @@ function move(carousel, images, dir) {
   var maxpos = width * images.length; //mutiply the imagewidth by the amount of images to get the total size of the carrosel
 
 
-  var pos = parseInt(carousel.getAttribute("data-pos"));
+  var pos = parseInt(carousel.dataset.pos);
   var nextpos = pos + width * dir; //calculate next position
 
   if (nextpos < maxpos && nextpos >= 0) {
     //just move to the nextpos 
     pos = nextpos;
+    carousel.dataset.pos = pos;
     carousel.scrollTo(pos, 0);
-    carousel.setAttribute("data-pos", pos);
 
   } else if (nextpos < 0) {
     //wrap around to the maxpos 
     pos = (maxpos - width);
-    carousel.setAttribute("data-pos", pos);
+    carousel.dataset.pos = pos;
     carousel.scrollTo(pos, 0);
 
   } else if (nextpos >= maxpos) {
     // go back to start position
     pos = 0;
-    carousel.setAttribute("data-pos", pos);
+    carousel.dataset.pos = pos;
     carousel.scrollTo(pos, 0);
   }
 }
 
-//this function just waits for the documet to load properly and then sets the carrosel position to 0 to avoid any weird stuff.
+/*
+* This function forces the carousel start position to be 0 and sets the data-pos attribute for the first time to 0 aswell.
+* @param {object} carousel // the carousel object
+*/
 function forceStartPosition(carousel) {
   carousel.scrollTo(0, 0);
-  var interval = setInterval(function() {
-    if (document.readyState === 'complete') {
-      carousel.scrollTo(0, 0);
-      carousel.setAttribute("data-pos", 0);
-      clearInterval(interval);
-    }
-  }, 100);
+  carousel.dataset.pos = 0;
 }
 
 
